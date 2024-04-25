@@ -176,7 +176,7 @@ const AppointmentForm = () => {
             >
               <option value="">Select Doctor</option>
               {doctors
-                .filter((doctor) => doctor.doctorDepartment === department)
+                //.filter((doctor) => doctor.doctorDepartment === department)
                 .map((doctor, index) => (
                   <option
                     value={`${doctor.firstName} ${doctor.lastName}`}
