@@ -15,18 +15,27 @@ const Register = () => {
   const [dob, setDob] = useState("");
   const [gender, setGender] = useState("");
   const [password, setPassword] = useState("");
-  const [role,setRole]=useState("");
+  const [role, setRole] = useState("");
   const navigateTo = useNavigate();
 
   const handleRegistration = async (e) => {
     e.preventDefault();
-    console.log('clicked')
-    console.log({ firstName, lastName, email, phone, nic, dob, gender, password, role })
+    console.log("clicked");
+    console.log({
+      firstName,
+      lastName,
+      email,
+      phone,
+      nic,
+      dob,
+      gender,
+      password,
+    });
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/patient/register",
-          { firstName, lastName, email, phone, nic, dob, gender, password, role },
+          "https://backend-hms.onrender.com/api/v1/user/patient/register",
+          { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
             headers: { "Content-Type": "application/json" },
@@ -44,11 +53,10 @@ const Register = () => {
           setDob("");
           setGender("");
           setPassword("");
-          setRole("")
-          
+          //setRole("")
         });
     } catch (error) {
-      console.log("error", error.response.data.message)
+      console.log("error", error.response.data.message);
       toast.error(error.response.data.message);
     }
   };
@@ -56,7 +64,7 @@ const Register = () => {
   if (isAuthenticated) {
     return <Navigate to={"/"} />;
   }
-  console.log('isAuthenticated',isAuthenticated)
+  console.log("isAuthenticated", isAuthenticated);
 
   return (
     <>
@@ -64,8 +72,10 @@ const Register = () => {
         <h2>Sign Up</h2>
         <p>Please Sign Up To Continue</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
+          Sign up today and gain full control over your healthcare management.
+          By creating an account, you’ll be able to access your medical records,
+          book appointments, communicate with healthcare providers, and more—all
+          in one secure place.
         </p>
         <form onSubmit={handleRegistration}>
           <div>
@@ -116,11 +126,11 @@ const Register = () => {
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
-            <select value={role} onChange={(e) => setRole(e.target.value)}>
+            {/* <select value={role} onChange={(e) => setRole(e.target.value)}>
               <option value="">Select Role</option>
               <option value="Patient">Patient</option>
               <option value="Admin">Admin</option>
-            </select>
+            </select>  */}
             <input
               type="password"
               placeholder="Password"

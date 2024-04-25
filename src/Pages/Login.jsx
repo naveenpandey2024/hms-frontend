@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "http://localhost:4000/api/v1/user/login",
+          "https://backend-hms.onrender.com/api/v1/user/login",
           { email, password, confirmPassword, role: "Patient" },
           {
             withCredentials: true,
@@ -48,8 +48,8 @@ const Login = () => {
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
+          Please enter your credentials to log in and access your account. Thank
+          you for choosing Naveen HealthCare Center for your needs.
         </p>
         <form onSubmit={handleLogin}>
           <input

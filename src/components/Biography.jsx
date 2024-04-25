@@ -1,6 +1,6 @@
 import React from "react";
 
-const Biography = ({imageUrl}) => {
+const Biography = ({ imageUrl }) => {
   return (
     <>
       <div className="container biography">
@@ -11,26 +11,24 @@ const Biography = ({imageUrl}) => {
           <p>Biography</p>
           <h3>Who We Are</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            We are a team of dedicated healthcare professionals, developers, and
+            support staff passionate about making a difference in the healthcare
+            industry. Our founders, Naveen Pandey and Aditya Dixit, have a
+            combined experience of over 10 years in healthcare management,
+            software development, and patient care.
           </p>
-          <p>We are all in 2024!</p>
+          <b>Our Mission</b>
           <p>We are working on a MERN STACK PROJECT.</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            Our mission is to empower healthcare providers by offering a
+            comprehensive, user-friendly platform that addresses the
+            complexities of hospital management. We aim to optimize every aspect
+            of hospital operations, from patient registration to billing and
+            reporting, ensuring that providers can focus on what matters
+            most—patient care.
           </p>
-          <p>Lorem ipsum dolor sit amet!</p>
-          <p>Coding is fun!</p>
+          <p>Join this Amazing Platform!!</p>
+          <p>It will empower your HealthCare Industry!!</p>
         </div>
       </div>
     </>
