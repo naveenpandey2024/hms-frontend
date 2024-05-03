@@ -166,7 +166,8 @@ const AppointmentForm = () => {
               })}
             </select>
             <select
-              value={`${doctorFirstName} ${doctorLastName}`}
+              // value={`${doctorFirstName} ${doctorLastName}`}
+              value={JSON.stringify({ firstName: doctorFirstName, lastName: doctorLastName })}
               onChange={(e) => {
                 const { firstName, lastName } = JSON.parse(e.target.value);
                 setDoctorFirstName(firstName);
